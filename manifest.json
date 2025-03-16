@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Translator",
+  "version": "0.0.1",
+  "description": "A simple translate extension for learning purposes",
+  "permissions": ["storage", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
